@@ -1,5 +1,5 @@
-class VideosController < ApplicationController
-  
+class VideosController < ApplicationController  
+
   def index
     @videos = Video.all
   end
@@ -17,7 +17,7 @@ class VideosController < ApplicationController
   end
 
   private 
-  def restaurant_params
+  def video_params
       params.require(:video).permit(:title, 
                                     :description, 
                                     :category,
