@@ -1,2 +1,14 @@
-<h1>Videos#show</h1>
-<p>Find me in app/views/videos/show.html.erb</p>
+<h1>
+  <%= @video.title %>
+</h1>
+
+<p>
+  <%= @video.description %>
+</p>
+
+<p>
+  <%= @video.author %>
+</p>
+
+
+<iframe width="560" height="315" src="<%= @video.youtube_url %>" frameborder="0" allowfullscreen></iframe>  
