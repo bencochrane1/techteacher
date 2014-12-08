@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208060424) do
+ActiveRecord::Schema.define(version: 20141208231337) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20141208060424) do
   create_table "videos", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "category"
+    t.integer  "category_id"
     t.string   "youtube_url"
     t.string   "author"
     t.string   "author_url"
