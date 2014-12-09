@@ -12,7 +12,10 @@ class Video < ActiveRecord::Base
   def embed
     if youtube_url.include?("=")
         self.youtube_id = youtube_url.split("=").last
-
+    elsif youtube_url.include?("http://youtu.be/")
+        self.youtube_id = youtube_url.split("e/").last
+    else youtube_url.include?("embed/")
+        self.youtube_id = youtube_url.split("embed/").last.split(' ').first.split('"')
     end
   end
 
