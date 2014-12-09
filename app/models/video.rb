@@ -2,20 +2,16 @@ class Video < ActiveRecord::Base
 
     before_save :embed
 
-    # def self.url_transform(youtube_url)
-    #     if youtube_url.length <= 28
-    #         youtube_url.gsub(/^https:\/\/www.youtube.com\/watch\?v=/,'')            
-    #     end
-
-    # end
 
   def embed
-    if youtube_url.include?("=")
+    if youtube_url.include?("embed/") && youtube_url.include?("iframe")
+        self.youtube_id = youtube_url.split("embed/").last.split(" ").first.delete('"')
+    elsif youtube_url.include?("watch?v=") && youtube_url.include?("list=")
+        self.youtube_id = youtube_url.split("watch?v=").last.split("&list").first
+    elsif youtube_url.include?("watch?v=") && youtube_url.length < 50
         self.youtube_id = youtube_url.split("=").last
     elsif youtube_url.include?("http://youtu.be/")
         self.youtube_id = youtube_url.split("e/").last
-    else youtube_url.include?("embed/")
-        self.youtube_id = youtube_url.split("embed/").last.split(' ').first.split('"')
     end
   end
 
