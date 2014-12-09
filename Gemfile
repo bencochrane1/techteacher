@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 
 gem 'devise'
-
+gem 'mandrill-api'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 
