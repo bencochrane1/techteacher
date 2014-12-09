@@ -1,12 +1,11 @@
-
 <div class="container">
     <div class="row">
     
         <div class="col-md-8">
         <h1><%= @video.title %></h1>
-            <iframe width="100%" height="500" src="//www.youtube.com/embed/TYMkHtoRUbw" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
 
-
+           <br> <%= @video.youtube_id %>
         </div>
 
         <div class="col-md-4">
@@ -14,9 +13,9 @@
             <h1>Details</h1>
             <ul>
                 <li><%= @video.title %></li>
+                <li><%= @video.description %></li>
                 <li><%= @video.author %></li>
                 <li><%= link_to "Author Website", @video.author_url, target: "_blank" %></li>
-                <li><%= @video.description %></li>
             </ul>
 
         </div>

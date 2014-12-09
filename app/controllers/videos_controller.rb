@@ -1,4 +1,3 @@
-
 class VideosController < ApplicationController
   before_action :set_video, only: [:show, :edit] 
 
@@ -30,7 +29,7 @@ class VideosController < ApplicationController
   private
 
   def video_params
-    params.require(:video).permit(:title, :description, :category, :author, :author_url, :youtube_url)
+    params.require(:video).permit(:title, :description, :category, :author, :author_url, :youtube_url, :youtube_id)
   end
 
   def set_video

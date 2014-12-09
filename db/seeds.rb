@@ -7,6 +7,15 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+admin = User.create({
+  email: "admin@example.com",
+  password: "password",
+  password_confirmation: "password",
+  confirmed_at: Time.now,
+  admin: true
+})
+
+
 videos1 = Video.create ({
     title: "JavaScript Road Trip Part 1 Completion Badge",
     description: "An introduction to the very basics of the JavaScript language.",

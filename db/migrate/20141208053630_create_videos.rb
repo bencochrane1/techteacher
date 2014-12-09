@@ -3,7 +3,7 @@ class CreateVideos < ActiveRecord::Migration
     create_table :videos do |t|
       t.string :title
       t.text :description
-      t.string :category
+      t.integer :category_id
       t.string :youtube_url
       t.string :author
       t.string :author_url
