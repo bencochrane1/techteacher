@@ -1,6 +1,10 @@
 
-    <div class="center">
-  <div class="row">
+<div class="container">
+    <div class="row">
+    <div class="col-md-3">
+    <%= link_to "Add a New Screencast", new_video_path, class: "btn btn-success"%>
+    </div>
+    </div>
     <% @videos.each do |video| %>
     <div class="col-md-3">
       <div class="thumbnail">
@@ -12,5 +16,5 @@
       </div>  
     </div>
     <% end %>
+
   </div>
-</div>
