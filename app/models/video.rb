@@ -6,10 +6,8 @@ class Video < ActiveRecord::Base
   def embed
     if youtube_url.include?("embed/") && youtube_url.include?("iframe")
         self.youtube_id = youtube_url.split("embed/").last.split(" ").first.delete('"')
-    elsif youtube_url.include?("watch?v=") && youtube_url.include?("list=")
-        self.youtube_id = youtube_url.split("watch?v=").last.split("&list").first
-    elsif youtube_url.include?("watch?v=") && youtube_url.length < 50
-        self.youtube_id = youtube_url.split("=").last
+    elsif youtube_url.include?("watch?v=")
+        self.youtube_id = youtube_url.split("watch?v=").last[0..10]
     elsif youtube_url.include?("http://youtu.be/")
         self.youtube_id = youtube_url.split("e/").last
     end
