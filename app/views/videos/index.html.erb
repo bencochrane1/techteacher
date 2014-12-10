@@ -1,8 +1,14 @@
 
+
+
 <div class="row">
     <div class="col-md-12 buttonspace">
-      <%= link_to "Add a New Screencast", new_video_path, class: "btn btn-success"%><br>
-    </div>
+      <% if user_signed_in? %> <%= link_to "Add a New Screencast", new_video_path, class: "btn btn-success"%><br>
+    <% end %></div>
+
+
+
+
     <% @videos.each do |video| %>
     <div class="col-md-3">
       <div class="thumbnail">
@@ -15,3 +21,4 @@
     </div>
     <% end %>
   </div>
+
