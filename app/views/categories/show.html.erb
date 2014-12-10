@@ -4,6 +4,7 @@
 
 <strong>Actions:</strong>
 <p>
+<%= image_tag @category.image.url(:large) %>
 <%= link_to "Edit", edit_category_path %>
 <%= link_to "Destroy", @category, method: :delete, data: { confirm: "Are you sure?" } %>
 </p>
