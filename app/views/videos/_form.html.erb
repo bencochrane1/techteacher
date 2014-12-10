@@ -33,6 +33,12 @@
       <%= f.label :youtube_url %><br>
       <%= f.text_field :youtube_url, class: "form-control" %>
     </div>
+
+  <div class="form_field">
+    <%= f.label :category_ids, "Category" %>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  </div>
+
     <div class="form-group">
       <%= f.label :author %><br>
       <%= f.text_field :author, class: "form-control" %>
