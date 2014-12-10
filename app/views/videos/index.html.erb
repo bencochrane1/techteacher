@@ -1,7 +1,8 @@
 
 <div class="row">
-    <%= link_to "Add a New Screencast", new_video_path, class: "btn btn-success"%><br>
-    
+    <div class="col-md-12 buttonspace">
+      <%= link_to "Add a New Screencast", new_video_path, class: "btn btn-success"%><br>
+    </div>
     <% @videos.each do |video| %>
     <div class="col-md-3">
       <div class="thumbnail">
