@@ -5,6 +5,7 @@ class Video < ActiveRecord::Base
     has_many :categoryvideos
     has_many :categories, through: :categoryvideos
 
+    belongs_to :user
 
     def embed
       if youtube_url.include?("embed/") && youtube_url.include?("iframe")

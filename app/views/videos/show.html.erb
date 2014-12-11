@@ -23,6 +23,10 @@
                 
                 <li><%= link_to "Author Website", @video.author_url, target: "_blank" %></li>
             </ul>
+            <p>
+                <%= link_to "Edit", edit_video_path %>
+                <%= link_to "Destroy", @video, method: :delete, data: { confirm: "Are you sure?" } %>
+                </p>
 
         </div>
 

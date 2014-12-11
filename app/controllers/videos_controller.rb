@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :set_video, only: [:show, :edit] 
+  before_action :set_video, only: [:show, :edit, :destroy] 
 
   def index
     if params[:category]
@@ -29,6 +29,11 @@ class VideosController < ApplicationController
 
   def new
     @video = Video.new
+  end
+
+  def destroy
+    @video.destroy
+    redirect_to videos_path
   end
 
   private
