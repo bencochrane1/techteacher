@@ -1095,3 +1095,16 @@ header { background: url(assets/images/fallbackcover.jpg) #000 no-repeat center 
  .form-control {
     width: 40%;
  }
+
+.caption {
+    text-align: center;
+}
+
+ .caption a {
+    text-decoration: none;
+ }
+
+ .caption a:hover {
+    color: #499E73;
+ }
+

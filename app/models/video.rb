@@ -7,6 +7,8 @@ class Video < ActiveRecord::Base
 
     belongs_to :user
 
+    validates :title, :description, :youtube_url, :author, :author_url, presence: true
+
     def embed
       if youtube_url.include?("embed/") && youtube_url.include?("iframe")
           self.youtube_id = youtube_url.split("embed/").last.split(" ").first.delete('"')
