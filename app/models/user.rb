@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
     has_many :videos
 
-    def admin?
+    def self.admin?
         admin
     end
     

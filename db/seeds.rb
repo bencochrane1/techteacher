@@ -99,7 +99,7 @@ videos2 = Video.create ({
 videos3 = Video.create ({
     title: "Try HTML",
     description: "An introduction HTML.",
-    category_ids: category3.id,
+    category_ids: [category3.id],
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
@@ -110,7 +110,7 @@ videos3 = Video.create ({
 videos4 = Video.create ({
     title: "Try Java",
     description: "An introduction Java.",
-    category_ids: category3.id,
+    category_ids: [category3.id],
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
