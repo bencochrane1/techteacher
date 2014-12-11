@@ -1,23 +1,28 @@
-<h1><%= @category.name %> Videos</h1>
+<div class="container padded">
+  <div class="row">
+  <h1><%= @category.name %> Videos</h1>
 
-<div class="row">
-    <div class="col-md-12 buttonspace">
-      <%= link_to "Add a New Screencast", new_video_path, class: "btn btn-success"%><br>
+  <div class="row">
+      <div class="col-md-12 buttonspace">
+
+        <%= link_to "Add a New Screencast", new_video_path, class: "btn btn-primary"%><br>
+      </div>
+
+
+      <% @videos.each do |video| %>
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <%= image_tag href="/img/video.jpg" %>
+            <div class="caption">
+              <h3><%= link_to video.title, video %></h3>
+                <p><%= video.description %></p>
+                <p><%= link_to "Edit", edit_video_path %></p>
+                <p><%= link_to "Delete", video, method: :delete, data: { confirm: "Are your sure?" }%></p>
+
+            </div>
+        </div>  
+      </div>
+      <% end %>
     </div>
-
-
-    <% @videos.each do |video| %>
-    <div class="col-md-3">
-      <div class="thumbnail">
-        <%= image_tag href="/img/video.jpg" %>
-          <div class="caption">
-            <h3><%= link_to video.title, video %></h3>
-              <p><%= video.description %></p>
-              <p><%= link_to "Edit", edit_video_path %></p>
-              <p><%= link_to "Delete", video, method: :delete, data: { confirm: "Are your sure?" }%></p>
-
-          </div>
-      </div>  
     </div>
-    <% end %>
   </div>

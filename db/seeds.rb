@@ -62,10 +62,14 @@ category4 = Category.create ({
     name: "Java"
 })
 
+category5 = Category.create ({
+    name: "Python"
+})
+
 videos1 = Video.create ({
     title: "JavaScript Road Trip Part 1 Completion Badge",
     description: "An introduction to the very basics of the JavaScript language.",
-    category_ids: [1],
+    category_ids: [1,2],
     youtube_url: "https://www.youtube.com/watch?v=_cLvpJY2deo",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/channel/UCwRXb5dUK4cvsHbx-rGzSgw",

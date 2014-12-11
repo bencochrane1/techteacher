@@ -1,24 +1,22 @@
 <div class="container">
     <div class="row">
     
-        <div class="col-md-8">
+        <div class="col-md-6">
         <h1><%= @video.title %></h1>
             <iframe width="560" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>?modestbranding=1&amp;rel=0&amp;showinfo=0&amp;autohide=1" frameborder="0" allowfullscreen></iframe>
-
-               <br> <%= @video.youtube_id %>
-            </div>
         </div>
+        
 
-        <div class="col-md-4">
+        <div class="col-md-6">
 
             <h1>Details</h1>
             <ul>
-                <li><%= @video.title %></li>
-                <li><%= @video.description %></li>
-                <li><%= @video.author %></li>
-                <p>Category:</p>
+                <li>Title: <%= @video.title %></li>
+                <li>Author: <%= @video.author %></li>
+                <li>Description: <%= @video.description %></li>
+                <p>Categories:</p>
                 <% @video.categories.each do |category| %>
-                    <%= category.name %>
+                    <li><%= category.name %></li>
                 <% end %>
                 
                 <li><%= link_to "Author Website", @video.author_url, target: "_blank" %></li>
@@ -29,7 +27,6 @@
                 </p>
 
         </div>
-
 
     </div>
 </div>
