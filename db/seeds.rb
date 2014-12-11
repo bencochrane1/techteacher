@@ -65,11 +65,7 @@ category4 = Category.create ({
 videos1 = Video.create ({
     title: "JavaScript Road Trip Part 1 Completion Badge",
     description: "An introduction to the very basics of the JavaScript language.",
-<<<<<<< HEAD
     category_ids: [1],
-=======
-    category_id: category1.id,
->>>>>>> eaa781852ae845bdcef1ec0d57ddcc259fbc9751
     youtube_url: "https://www.youtube.com/watch?v=_cLvpJY2deo",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/channel/UCwRXb5dUK4cvsHbx-rGzSgw",
@@ -78,11 +74,7 @@ videos1 = Video.create ({
 videos2 = Video.create ({
     title: "Try jQuery",
     description: "An introduction jQuery language.",
-<<<<<<< HEAD
     category_ids: [2],
-=======
-    category_id: category2.id,
->>>>>>> eaa781852ae845bdcef1ec0d57ddcc259fbc9751
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
@@ -93,11 +85,7 @@ videos2 = Video.create ({
 videos3 = Video.create ({
     title: "Try HTML",
     description: "An introduction HTML.",
-<<<<<<< HEAD
     category_ids: [3],
-=======
-    category_id: category3.id,
->>>>>>> eaa781852ae845bdcef1ec0d57ddcc259fbc9751
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
@@ -108,11 +96,7 @@ videos3 = Video.create ({
 videos4 = Video.create ({
     title: "Try Java",
     description: "An introduction Java.",
-<<<<<<< HEAD
     category_ids: [4],
-=======
-    category_id: category4.id,
->>>>>>> eaa781852ae845bdcef1ec0d57ddcc259fbc9751
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",

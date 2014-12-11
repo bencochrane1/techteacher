@@ -1,2 +1,39 @@
-<h1>ShowVideos#index</h1>
-<p>Find me in app/views/show_videos/index.html.erb</p>
+<h1>Your Videos</h1>
+
+
+<table class="table table-striped table-bordered">
+  <tr>
+    <th class="center">Thumbnail</th>
+    <th class="center">Title</th>
+    <th class="center">Youtube Link</th>
+    <th class="center">Action</th>
+  </tr>
+  <% @videos.each do |video| %>
+  <tr>
+    <td>
+        <iframe width="150" height="100" src="//www.youtube.com/embed/<%= video.youtube_id %>?modestbranding=1&amp;rel=0&amp;showinfo=0&amp;autohide=1" frameborder="0" allowfullscreen></iframe>
+    </td>
+    <td><%= video.title %></td>
+    <td><%= link_to "Youtube", video.youtube_url %></td>
+    <td>
+
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+        Action
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <li class="left"><%= link_to "View", video, class: "btn btn-link" %></li>
+          <li class="left"><%= link_to "Edit", edit_video_path(video), class: "btn btn-link" %></li>
+          <li class="left"><%= link_to "Destroy", video, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-link" %></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<br>
+
+<% if user_signed_in? %>
+<%= link_to 'New Video', new_video_path, class: "btn btn-link", data: { no_turbolink: true } %>
+<% end %>
