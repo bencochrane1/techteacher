@@ -42,11 +42,12 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: white;
     
 }
 
 header {
-    background-color: grey;
+    /*background-color: grey;*/
     margin-top: -62px;
 }
 
@@ -920,6 +921,23 @@ body {
 }
 
 
+/*background video*/
+
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(polina.jpg) no-repeat;
+background-size: cover;
+transition: 1s opacity;
+}
+
+
+/*.vidcontainer {
+    width: 1200px;
+    position: relative;
+    z-index: -1;
+}*/
 
 
 /*typing animations*/
@@ -952,8 +970,14 @@ body {
     overflow:hidden;
     border-right: .1em solid white;
     
-    -webkit-animation: typing 10s steps(30, end), /* # of steps = # of characters */
+    -webkit-animation: typing 10s steps(30, end), /* # of steps = # of characters 
                         blink-caret 1s step-end infinite;
     -moz-animation: typing 10s steps(30, end), /* # of steps = # of characters */
                         blink-caret 1s step-end infinite;
+}
+
+
+@media screen and (max-device-width: 800px) {
+header { background: url(assets/fallbackcover.jpg) #000 no-repeat center center fixed; }
+#bgvid { display: none; }
 }
