@@ -6,6 +6,9 @@ gem 'devise'
 gem 'mandrill-api'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
+gem 'rmagick'
+
+gem 'carrierwave'
 
 gem 'rails', '4.1.7'
 gem 'sqlite3', group: [:development, :test]
