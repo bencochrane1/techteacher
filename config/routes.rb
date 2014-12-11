@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'show_videos/index'
+
+  get 'show_videos/edit'
+
+  get 'show_videos/show'
+
   resources :categories
 
   devise_for :users
@@ -7,6 +13,8 @@ Rails.application.routes.draw do
   resources :videos
 
   root 'videos#index'
+
+  get '/users/:id/videos', to: 'show_videos#users'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
