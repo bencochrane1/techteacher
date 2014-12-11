@@ -27,7 +27,7 @@ class VideosController < ApplicationController
   def show
   end
 
-  def new
+  def new 
     @video = Video.new
   end
 
@@ -47,3 +47,4 @@ class VideosController < ApplicationController
   end
 
 end
+

@@ -7,7 +7,7 @@ gem 'mandrill-api'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'rmagick'
-
+gem 'fog'
 gem 'carrierwave'
 
 gem 'rails', '4.1.7'
