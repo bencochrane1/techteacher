@@ -47,7 +47,8 @@ roger = User.create({
 })
 
 category1 = Category.create ({
-    name: "JavaScript"
+    name: "JavaScript",
+    image: "http://glynrob.com/wp-content/uploads/js-logo.png"
 })
 
 category2 = Category.create ({
