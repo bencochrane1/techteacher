@@ -286,11 +286,25 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar.navbar-default.navbar-fixed-top {
-    background-color: rgba(35,49,64,0.9);
+    background-color: rgb(35,49,64);
 }
 
+@media(max-width: 768px) {
+    header { background: #000 url(image_path('fallbackcover.png')) no-repeat center center fixed; }
+    #bgvid { display: none; }
+}
 
 @media(min-width:768px) {
+
+
+video#bgvid {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background-size: cover;
+    transition: 1s opacity;
+    display: block;
+}
 
 /*animations*/
 
@@ -366,7 +380,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
+    /*background-image: url(../img/header-bg.jpg);*/
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -978,7 +992,7 @@ body {
 
 /*background video*/
 
-video#bgvid {
+/*video#bgvid {
 position: fixed; right: 0; bottom: 0;
 min-width: 100%; min-height: 100%;
 width: auto; height: auto; z-index: -100;
@@ -986,8 +1000,7 @@ background:
     url(assets/images/fallbackcover.png) no-repeat;
 background-size: cover;
 transition: 1s opacity;
-}
-
+}*/
 
 
 /*.vidcontainer {
@@ -1035,10 +1048,7 @@ transition: 1s opacity;
 }
 */
 
-@media screen and (max-device-width: 800px) {
-header { background: url(assets/images/fallbackcover.jpg) #000 no-repeat center center fixed; }
-#bgvid { display: none; }
-}
+
 
 
 
