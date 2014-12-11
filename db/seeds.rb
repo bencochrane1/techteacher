@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.destroy_all
+Category.destroy_all
+Video.destroy_all
+
+
 admin1 = User.create({
   email: "jhooker@phonicshero.com",
   password: "password",
@@ -52,60 +57,64 @@ category1 = Category.create ({
 })
 
 category2 = Category.create ({
-    name: "jQuery"
+    name: "jQuery",
+    image: File.open("#{Rails.root}/test/fixtures/uploads/jquery.png")
 })
 
 category3 = Category.create ({
-    name: "HTML"
+    name: "HTML",
+    image: File.open("#{Rails.root}/test/fixtures/uploads/jquery.png")
 })
 
 category4 = Category.create ({
-    name: "Java"
+    name: "Java",
+    image: File.open("#{Rails.root}/test/fixtures/uploads/jquery.png")
 })
 
 category5 = Category.create ({
-    name: "Python"
+    name: "Python",
+    image: File.open("#{Rails.root}/test/fixtures/uploads/jquery.png")
 })
 
 videos1 = Video.create ({
     title: "JavaScript Road Trip Part 1 Completion Badge",
     description: "An introduction to the very basics of the JavaScript language.",
-    category_ids: [1,2],
+    category_ids: [category1.id,category2.id],
     youtube_url: "https://www.youtube.com/watch?v=_cLvpJY2deo",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/channel/UCwRXb5dUK4cvsHbx-rGzSgw",
-    user_id: 3
+    user_id: peter.id
 })
 videos2 = Video.create ({
     title: "Try jQuery",
     description: "An introduction jQuery language.",
-    category_ids: [2],
+    category_ids: [category1.id,category2.id],
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
-    user_id: 3
+    user_id: roger.id
 
 })
 
 videos3 = Video.create ({
     title: "Try HTML",
     description: "An introduction HTML.",
-    category_ids: [3],
+    category_ids: category3.id,
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
-    user_id: 4
+    user_id: admin1.id
 
 })
 
 videos4 = Video.create ({
     title: "Try Java",
     description: "An introduction Java.",
-    category_ids: [4],
+    category_ids: category3.id,
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
-    user_id: 5
+    user_id: roger.id
 
 })
 
