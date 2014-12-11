@@ -9,6 +9,7 @@ gem 'autoprefixer-rails'
 gem 'rmagick'
 gem 'fog'
 gem 'carrierwave'
+gem 'vider', github: 'wazery/vider'
 
 gem 'rails', '4.1.7'
 gem 'sqlite3', group: [:development, :test]
