@@ -286,7 +286,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar.navbar-default.navbar-fixed-top {
-    background-color: rgb(35,49,64);
+    background-color: rgba(35,49,64,0.8);
 }
 
 @media(max-width: 768px) {
@@ -1117,4 +1117,5 @@ transition: 1s opacity;
  .caption a:hover {
     color: #499E73;
  }
+
 
