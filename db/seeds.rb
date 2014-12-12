@@ -114,7 +114,7 @@ videos4 = Video.create ({
     youtube_url: "https://www.youtube.com/watch?v=nyKB6ZuqMn0&list=UUwRXb5dUK4cvsHbx-rGzSgw",
     author: "Derek Banas",
     author_url: "https://www.youtube.com/watch?v=Rub-JsjMhWY&list=UUwRXb5dUK4cvsHbx-rGzSgw",
-    user_id: roger.id
+    user_id: phil.id
 
 })
 

@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :authorize_admin!, except: [:index, :show]
+  # before_action :authorize_admin!, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_video, only: [:show, :edit, :destroy] 
 
