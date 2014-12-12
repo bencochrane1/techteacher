@@ -290,7 +290,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 @media(max-width: 768px) {
-    header { background: #000 url('https://s3-ap-southeast-1.amazonaws.com/techteacher/fallbackcover.png')) no-repeat center center fixed; }
+    header { background: #000 url(https://s3-ap-southeast-1.amazonaws.com/techteacher/fallbackcover.png)) no-repeat center center fixed; }
     #bgvid { display: none; }
 }
 
