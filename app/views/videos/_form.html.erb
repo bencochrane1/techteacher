@@ -1,55 +1,56 @@
 <div class="col-md-8">
-<%= form_for @video, :html => { :multipart => true } do |f| %>
-  <% if @video.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <h4><%= pluralize(@video.errors.count, "error") %> prohibited this listing from being saved:</h4>
+    <%= form_for @video, :html => { :multipart => true } do |f| %>
+    <% if @video.errors.any? %>
+        <div id="error_explanation" class="alert alert-danger alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4><%= pluralize(@video.errors.count, "error") %> prohibited this listing from being saved:</h4>
 
-      <ul>
-      <% @video.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+              <ul>
+              <% @video.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+        </div>
+    <% end %>
+
+
+    <div class="alert alert-danger" style="display:none">
+        <noscript>Javascript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
     </div>
-  <% end %>
 
+    <div class="form-group">
+        <%= f.label :title %><br>
+        <%= f.text_field :title, class: "form-control" %>
+    </div>
 
-  <div class="alert alert-danger" style="display:none">
-    <noscript>Javascript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
-  </div>
+    <div class="form-group">
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
-  </div>
+    <div class="form-group">
+        <%= f.label :youtube_url %><br>
+        <%= f.text_field :youtube_url, class: "form-control" %>
+    </div>
 
-  
-  <div class="form-group">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :youtube_url %><br>
-    <%= f.text_field :youtube_url, class: "form-control" %>
-  </div>
+    <div class="form_field">
+        <%= f.label :category_ids, "Category" %><br>
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>    
+    </div>
 
-<div class="form_field">
-  <%= f.label :category_ids, "Category" %><br>
-  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>    
-</div>
+    <div class="form-group">
+        <%= f.label :author %><br>
+        <%= f.text_field :author, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :author %><br>
-    <%= f.text_field :author, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :author_url %><br>
-    <%= f.text_field :author_url, class: "form-control" %>
-  </div>
+    <div class="form-group">
+        <%= f.label :author_url %><br>
+        <%= f.text_field :author_url, class: "form-control" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Add Video", class: "btn btn-primary" %>
-  </div>
+    <div class="actions">
+        <%= f.submit "Add Video", class: "btn btn-primary" %>
+    </div>
 
 <% end %>
 </div>
