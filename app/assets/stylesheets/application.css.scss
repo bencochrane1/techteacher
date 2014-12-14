@@ -2,6 +2,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.notice {
+    padding-top: 60px;
+    text-align: center;
+    text-color: white;
+}
 
 .col-md-3:nth-child(4n+1) {
     clear: left;

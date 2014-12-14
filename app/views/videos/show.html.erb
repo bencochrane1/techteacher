@@ -21,10 +21,12 @@
                 
                 <li><%= link_to "Author Website", @video.author_url, target: "_blank" %></li>
             </ul>
-            <p>
-                <%= link_to "Edit", edit_video_path %>
-                <%= link_to "Destroy", @video, method: :delete, data: { confirm: "Are you sure?" } %>
+            <p><br><br><br><br>
+                <% if user_signed_in? && (current_user.admin? || current_user.video_ids.include?(@video.id)) %>
+                <%= link_to "Edit", edit_video_path(@video), class: "btn btn-default" %>
+                <%= link_to "Destroy", @video, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"  %>
                 </p>
+                <% end %>
 
         </div>
 
